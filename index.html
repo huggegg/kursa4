@@ -3,12 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Online Forms</title>
     <link rel="stylesheet" href="style.css">
     <script src="tailwind.config.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="/img/online.ico" type="image/x-icon">
+    <script src="js/script.js"></script>
 </head>
 <body>
+    <div class="modal fixed top-0 left-0 bg-black h-[100vh]" id="modal">
+        <div class="bg-black h-[100vh]">
+            
+        </div>
+    </div>
     <section>
     <header class="text-[#333] min-h-[100vh] bg-gradient-to-l from-[#699BF7] to-[#E2E9F5] rounded-b-[30px]">
         <div class="container pt-4 mx-auto">
@@ -19,6 +26,7 @@
             <a href="#" class="ml-12">Безопасность</a>
             <a href="#" class="ml-12">Цены</a>
                 <a href="#" class=" ml-12 text-4xl text-white font-extrabold px-12 py-6 bg-[#699BF7] rounded-3xl">Вход</a>
+                
             </div>
         </nav>
         <div class="flex justify-around flex-wrap mt-[100px]">
@@ -26,7 +34,7 @@
                 <div class=" text-5xl font-extrabold mb-6 mt-12">Быстро получайте информацию</div>
                 <div class="text-2xl opacity-50 mb-12">С легкостью создавайте формы и опросы, а также анализируйте их результаты. Статистика ответов обновляется в режиме
                 реального времени</div>
-                <a class="text-white text-3xl px-4 py-6 hover:bg-[#7697d4] transition-all bg-[#699BF7] rounded-3xl">Попробовать формы</a>
+                <a id="openModal" class="text-white text-3xl px-4 cursor-pointer py-6 hover:bg-[#7697d4] transition-all bg-[#699BF7] rounded-3xl">Попробовать формы</a>
             </div>
             <img src="img/korzina.svg" class="opacity-70  hover:opacity-100 transition-opacity" alt="">
         </div>
@@ -87,20 +95,145 @@
             </div>
             
         </div>
-        <div class="relative text-[32px] font-black text-white">
+        <div class="relative text-[32px] font-black text-white mb-[40px]">
             <img src="img/recomend.jpg" class="rounded-3xl" alt="">
             <div class="absolute top-[30px] left-[24px] w-[336px] z-10">Рекомендовали бы вы эту еду своим друзьям?</div>
-            <div class="bg-[#d9d9d976] absolute bottom-[100px] left-[24px] py-[44px] px-[76px] rounded-3xl ">
+            <div class="bg-[#d9d9d976] absolute bottom-[100px] active:bg-[#d9d9d9dc] transition-all left-[24px] py-[44px] px-[76px] rounded-3xl  ">
                 <img src="img/like.svg" alt="">
-                <div class="opacity-60 text-center">Да</div>
+                <div class="opacity-80  text-center">Да</div>
             </div>
-            <div class="bg-[#d9d9d976] absolute bottom-[100px] right-[102px] py-[44px] px-[76px] rounded-3xl">
+            <div class="bg-[#d9d9d976] absolute bottom-[100px] right-[102px] active:bg-[#d9d9d9dc] transition-all py-[44px] px-[76px] rounded-3xl">
                 <img src="img/like.svg" class="rotate-180" alt="">
-                <div class="opacity-60 text-center">Нет</div>
+                <div class="opacity-80 text-center">Нет</div>
             </div>
         </div>
     </div>
     </div>
+</section>
+
+<section class="min-h-[570px] text-[#333]">
+<div class="container mx-auto">
+    <div class="text-[64px] font-black text-center pt-[40px]">И это не всё</div>
+    <div class="flex flex-wrap justify-around mt-[45px]">
+        <div class="flex flex-col items-center justify-center font-black w-[300px] text-center mb-6">
+            <img src="img/svg2/adaptive.svg" alt="">
+            <div class="text-[32px]">Адаптивный дизайн</div>
+            <div class="text-[20px] opacity-50">Сервис и опросы выглядят красиво на всех девайсах</div>
+        </div>
+        <div class="flex flex-col items-center justify-center font-black w-[300px] text-center mb-6">
+            <img src="img/svg2/sharing.svg" alt="">
+            <div class="text-[32px]">Шаринг</div>
+            <div class="text-[20px] opacity-50">Делитесь ссылкой на отчёт с другими участниками</div>
+        </div>
+        <div class="flex flex-col items-center justify-center font-black w-[300px] text-center mb-6">
+            <img src="img/svg2/export.svg" alt="">
+            <div class="text-[32px]">Экспорт</div>
+            <div class="text-[20px] opacity-50">Смотрите отчёты и сохраняйте их в CSV, XLSX, PDF</div>
+        </div>
+        <div class="flex flex-col items-center justify-center font-black w-[300px] text-center mb-6">
+            <img src="img/svg2/limits.svg" alt="">
+            <div class="text-[32px]">Лимиты</div>
+            <div class="text-[20px] opacity-50">Ограничивайте заполнение опроса по дате или количеству ответов</div>
+        </div>
+    </div>
+</div>
+</section>
+<section class="min-h-[750px] bg-[#E2E9F4] text-[#333] rounded-t-3xl">
+<div class="container mx-auto">
+    <div class="text-[36px] font-extrabold text-center">
+        <div class="">Мы участвуем в вашем успехе</div>
+        <div class="flex items-center justify-center">Online<img src="img/online.svg" alt="">Forms</div>
+    </div>
+</div>
+<div class="flex flex-wrap justify-around items-center text-white mt-[30px] gap-[100px]">
+    <div class="flex flex-col bg-[#669BBC] pt-[12px] pb-[56px] pl-[20px] pr-[38px] rounded-3xl w-[386px]">
+        <div class="flex items-center justify-center">
+            <img src="img/uspex/man.jpg" class="rounded-full" alt="">
+            <div class="text-[20px] font-extrabold ml-3">Для менеджеров по маркетингу</div>
+        </div>
+        <div class="text-[16px] font-semibold border-solid border-b-[1px] ">
+        <div class="border-solid border-b-[1px] pb-2 mt-[36px] w-[328px]">Измерьте удовлетворенность клиентов</div>
+        <div class=" border-solid border-b-[1px] pb-2 mt-[36px] w-[328px]">Измерьте удовлетворенность клиентов</div>
+        <div class="pb-2 mt-[36px] w-[328px]">Измерьте удовлетворенность клиентов</div>
+    </div>
+        <div class="text-[16px] font-semibold pb-2 mt-[36px] w-[328px]">Измерьте удовлетворенность клиентов</div>
+        <a href="#!" class="bg-white rounded-3xl w-[86px] px-[23px] mt-[38px] transition-all active:bg-slate-200"><img src="img/uspex/right.svg" alt=""></a>
+    </div>
+    <div class="flex flex-col bg-[#023047] pt-[12px] pb-[56px] pl-[20px] pr-[38px] rounded-3xl w-[386px]">
+        <div class="flex items-center justify-center">
+            <img src="img/uspex/woman1.jpg" class="rounded-full" alt="">
+            <div class="text-[20px] font-extrabold ml-3">Для менеджеров по маркетингу</div>
+        </div>
+        <div class="text-[16px] font-semibold border-solid border-b-[1px] ">
+        <div class="border-solid border-b-[1px] pb-2 mt-[36px] w-[328px]">Измерьте удовлетворенность клиентов</div>
+        <div class=" border-solid border-b-[1px] pb-2 mt-[36px] w-[328px]">Измерьте удовлетворенность клиентов</div>
+        <div class="pb-2 mt-[36px] w-[328px]">Измерьте удовлетворенность клиентов</div>
+    </div>
+        <div class="text-[16px] font-semibold pb-2 mt-[36px] w-[328px]">Измерьте удовлетворенность клиентов</div>
+        <a href="#!" class="bg-white rounded-3xl w-[86px] px-[23px] mt-[38px] transition-all active:bg-slate-200"><img src="img/uspex/right.svg" alt=""></a>
+    </div>
+    <div class="flex flex-col bg-[#517ABA] pt-[12px] pb-[56px] pl-[20px] pr-[38px] rounded-3xl w-[386px]">
+        <div class="flex items-center justify-center">
+            <img src="img/uspex/woman2.jpg" class="rounded-full" alt="">
+            <div class="text-[20px] font-extrabold ml-3">Для менеджеров по маркетингу</div>
+        </div>
+        <div class="text-[16px] font-semibold border-solid border-b-[1px] ">
+        <div class="border-solid border-b-[1px] pb-2 mt-[36px] w-[328px]">Измерьте удовлетворенность клиентов</div>
+        <div class=" border-solid border-b-[1px] pb-2 mt-[36px] w-[328px]">Измерьте удовлетворенность клиентов</div>
+        <div class="pb-2 mt-[36px] w-[328px]">Измерьте удовлетворенность клиентов</div>
+    </div>
+        <div class="text-[16px] font-semibold pb-2 mt-[36px] w-[328px]">Измерьте удовлетворенность клиентов</div>
+        <a href="#!" class="bg-white rounded-3xl w-[86px] px-[23px] mt-[38px] transition-all active:bg-slate-200"><img src="img/uspex/right.svg" alt=""></a>
+    </div>
+    
+    
+    
+</div>
+</section>
+<section>
+    <footer class="bg-[#181824] min-h-[470px] text-white font-black">
+        <div class="container mx-auto pt-[70px]">
+            <div class="flex justify-around items-center border-b-[1px] border-solid border-[#282828]">
+            <div class="flex justify-center items-center text-[36px]">Online <img src="img/footerOnline.svg" alt=""> Forms</div>
+            <div class="">
+                <div class="text-[24px] mb-[18px]">Поддержка</div>
+                <div class="text-[16px]">
+                    <div class="hover:opacity-100 opacity-60 transition-opacity mb-[20px]">База знаний</div>
+                    <div class="hover:opacity-100 opacity-60 transition-opacity mb-[20px]">Глоссарий</div>
+                    <div class="hover:opacity-100 opacity-60 transition-opacity mb-[20px]">Связаться с нами</div>
+                    <div class="hover:opacity-100 opacity-60 transition-opacity mb-[20px]">OF vs Аналоги</div>
+                    <div class="hover:opacity-100 opacity-60 transition-opacity mb-[20px]">Акции партнёров</div>
+                </div>
+            </div>
+            <div class="">
+                <div class="text-[24px] mb-[18px]">Компания</div>
+                <div class="text-[16px]">
+                    <div class="hover:opacity-100 opacity-60 transition-opacity mb-[20px]">Соглашение</div>
+                    <div class="hover:opacity-100 opacity-60 transition-opacity mb-[20px]">Конфиденциальность</div>
+                    <div class="hover:opacity-100 opacity-60 transition-opacity mb-[20px]">Юр. информация</div>
+                </div>
+            </div>
+            <div class="">
+                <div class="text-[24px] mb-[18px]">Разделы</div>
+                <div class="text-[16px]">
+                    <div class="hover:opacity-100 opacity-60 transition-opacity mb-[20px]">Цены</div>
+                    <div class="hover:opacity-100 opacity-60 transition-opacity mb-[20px]">Шаблоны</div>
+                    <div class="hover:opacity-100 opacity-60 transition-opacity mb-[20px]">Блог</div>
+                    <div class="hover:opacity-100 opacity-60 transition-opacity mb-[20px]">Партнерская программа</div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="flex justify-around font-bold mt-[34px]">
+            <div class="text-[16px]">© 2024 ООО “PROEKT”</div>
+            <div class="flex text-[24px]">
+                <div class="hover:opacity-100 opacity-60 transition-opacity">Telegram</div>
+                <div class="hover:opacity-100 opacity-60 transition-opacity ml-[50px]">ВКонтакте</div>
+            </div>
+        </div>
+        </div>
+    </footer>
 </section>
 </body>
 </html>
