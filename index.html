@@ -8,13 +8,20 @@
     <script src="tailwind.config.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="shortcut icon" href="/img/online.ico" type="image/x-icon">
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
 </head>
 <body>
-    <div class="modal fixed top-0 left-0 bg-black h-[100vh]" id="modal">
-        <div class="bg-black h-[100vh]">
-            
+    <div id="modal" class="collapse z-50 w-full modal fixed top-0 left-0 bg-[#33333398] text-[#333] h-[100vh]" id="modal">
+        <div class="flex h-[100vh] justify-center items-center">
+        <div class="w-[549px] h-[382px] bg-[#E3E3E3] font-black text-[24px] rounded-3xl relative">
+            <div class="text-center text-[32px] w-[240px] mx-auto">Попробовать формы</div>
+            <div class="flex justify-around items-center text-center mt-[28px]">
+            <div class="bg-white  hover:bg-slate-400 hover:text-white px-5 py-[50px] rounded-3xl">Бесплатная <br> версия</div>
+            <div class="bg-white  hover:bg-slate-400 hover:text-white px-[35px] py-[50px] rounded-3xl text-[48px]">30$</div>
+            <a id="closeModal" class="cursor-pointer absolute right-0 top-0">X</a>
         </div>
+        </div>
+    </div>
     </div>
     <section>
     <header class="text-[#333] min-h-[100vh] bg-gradient-to-l from-[#699BF7] to-[#E2E9F5] rounded-b-[30px]">
@@ -152,9 +159,9 @@
             <div class="text-[20px] font-extrabold ml-3">Для менеджеров по маркетингу</div>
         </div>
         <div class="text-[16px] font-semibold border-solid border-b-[1px] ">
-        <div class="border-solid border-b-[1px] pb-2 mt-[36px] w-[328px]">Измерьте удовлетворенность клиентов</div>
-        <div class=" border-solid border-b-[1px] pb-2 mt-[36px] w-[328px]">Измерьте удовлетворенность клиентов</div>
-        <div class="pb-2 mt-[36px] w-[328px]">Измерьте удовлетворенность клиентов</div>
+        <div class="border-solid border-b-[1px] pb-2 mt-[36px] w-[328px]">Узнайте о потребностях ваших клиентов</div>
+        <div class=" border-solid border-b-[1px] pb-2 mt-[36px] w-[328px]">Применяйте исследования сегментации</div>
+        <div class="pb-2 mt-[36px] w-[328px]">Предотвратитe оттока клиентов</div>
     </div>
         <div class="text-[16px] font-semibold pb-2 mt-[36px] w-[328px]">Измерьте удовлетворенность клиентов</div>
         <a href="#!" class="bg-white rounded-3xl w-[86px] px-[23px] mt-[38px] transition-all active:bg-slate-200"><img src="img/uspex/right.svg" alt=""></a>
@@ -162,23 +169,23 @@
     <div class="flex flex-col bg-[#023047] pt-[12px] pb-[56px] pl-[20px] pr-[38px] rounded-3xl w-[386px]">
         <div class="flex items-center justify-center">
             <img src="img/uspex/woman1.jpg" class="rounded-full" alt="">
-            <div class="text-[20px] font-extrabold ml-3">Для менеджеров по маркетингу</div>
+            <div class="text-[20px] font-extrabold ml-3">Для менеджеров по персоналу</div>
         </div>
         <div class="text-[16px] font-semibold border-solid border-b-[1px] ">
-        <div class="border-solid border-b-[1px] pb-2 mt-[36px] w-[328px]">Измерьте удовлетворенность клиентов</div>
-        <div class=" border-solid border-b-[1px] pb-2 mt-[36px] w-[328px]">Измерьте удовлетворенность клиентов</div>
-        <div class="pb-2 mt-[36px] w-[328px]">Измерьте удовлетворенность клиентов</div>
+        <div class="border-solid border-b-[1px] pb-2 mt-[36px] w-[328px]">Проверить потенциальных кандидатов</div>
+        <div class=" border-solid border-b-[1px] pb-2 mt-[36px] w-[328px]">Спрашивайте мнения сотрудников</div>
+        <div class="pb-2 mt-[36px] w-[328px]">Оценить деятельность сотрудников</div>
     </div>
-        <div class="text-[16px] font-semibold pb-2 mt-[36px] w-[328px]">Измерьте удовлетворенность клиентов</div>
+        <div class="text-[16px] font-semibold pb-2 mt-[36px] w-[328px]">Работайте с отзывами сотрудников</div>
         <a href="#!" class="bg-white rounded-3xl w-[86px] px-[23px] mt-[38px] transition-all active:bg-slate-200"><img src="img/uspex/right.svg" alt=""></a>
     </div>
     <div class="flex flex-col bg-[#517ABA] pt-[12px] pb-[56px] pl-[20px] pr-[38px] rounded-3xl w-[386px]">
         <div class="flex items-center justify-center">
             <img src="img/uspex/woman2.jpg" class="rounded-full" alt="">
-            <div class="text-[20px] font-extrabold ml-3">Для менеджеров по маркетингу</div>
+            <div class="text-[20px] font-extrabold ml-3">Для специалистов по продукции и продажам</div>
         </div>
         <div class="text-[16px] font-semibold border-solid border-b-[1px] ">
-        <div class="border-solid border-b-[1px] pb-2 mt-[36px] w-[328px]">Измерьте удовлетворенность клиентов</div>
+        <div class="border-solid border-b-[1px] pb-2 mt-[36px] w-[328px]">Проведите исследование рынка</div>
         <div class=" border-solid border-b-[1px] pb-2 mt-[36px] w-[328px]">Измерьте удовлетворенность клиентов</div>
         <div class="pb-2 mt-[36px] w-[328px]">Измерьте удовлетворенность клиентов</div>
     </div>
