@@ -20,3 +20,4 @@ document.getElementById("modal").addEventListener("click", event => {
     if (event._isClickWithInModal) return;
     event.currentTarget.classList.add("collapse");
 })
+

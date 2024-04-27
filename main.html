@@ -10,24 +10,56 @@
     <link rel="shortcut icon" href="/img/online.ico" type="image/x-icon">
     <script src="js/Chart.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/main.js" defer></script>
 </head>
 <body class="bg-[#B5B5B5] text-[#333]">
+    <div  class="collapse z-50 w-full fixed top-0 left-0 bg-[#33333398] text-[#333] h-[100vh]" id="modalAdm">
+        <div class="flex h-[100vh] justify-center items-center">
+        <div class="min-w-[549px] min-h-[382px] bg-[#E3E3E3] font-black text-[24px] rounded-3xl relative">
+            <div class="flex text-[24px] justify-center flex-col mx-auto pt-12 items-center font-black w-[336px] ">
+        
+                <div class="flex mr-2 justify-center items-center py-[20px] mb-[52px] w-[244px]  pl-[25px] pr-[45px] bg-[#D9D9D9] rounded-3xl">
+                    <img src="img/admin/svg/bx_home.svg" alt="">
+                    <div class="ml-2">Главная</div>
+                </div>
+        
+                <div class="flex mr-2 justify-center items-center py-[20px] pl-[25px] w-[244px] mb-[52px] pr-[45px] bg-[#D9D9D9] rounded-3xl">
+                    <img src="img/admin/svg/shield.svg" alt="">
+                    <div class="ml-2">Доступ</div>
+                </div>
+        
+                <div class="flex mr-2 justify-center items-center py-[20px] w-[244px] pl-[25px] mb-[52px] pr-[45px] bg-[#D9D9D9] rounded-3xl">
+                    <img src="img/admin/svg/gear.svg" alt="">
+                    <div class="ml-2">Параметры</div>
+                </div>
+        
+                <div class="flex mr-2 justify-center items-center py-[20px] pl-[25px] w-[244px] mb-[52px] pr-[45px] bg-[#D9D9D9] rounded-3xl">
+                    <img src="img/admin/svg/dollar.svg" alt="">
+                    <div class="ml-2">Реклама</div>
+                </div>
+                <a id="closeModalAdm" class="cursor-pointer absolute right-0 top-0">X</a>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
 <header>
+    
     <div class="">
         <nav class="pt-10  rounded-3xl flex items-center justify-around  mx-auto">
             <a href="index.html" class="ml-2 logo flex items-center flex-wrap justify-center text-4xl font-extrabold">Online <img src="img/online.svg" alt=""> Forms</a>
-            <div class="text-3xl font-extrabold flex items-center justify-center flex-wrap">
-            <a href="#" class="mr-20 mb-2">Настройка сайта</a>
-            <a href="#" class="mr-20 mb-2">Пользователи</a>
-            <a href="#" class="mr-20 mb-2">Виджеты</a>
+            <div class="text-3xl font-extrabold flex items-center justify-center flex-wrap text-center">
+            <a href="#" class="mr-20 mb-2 opacity-80 hover:opacity-100 transition-opacity" id="openModalAdm">Настройка сайта</a>
+            <a href="#" class="mr-20 mb-2 opacity-80 hover:opacity-100 transition-opacity max-[700px]:hidden">Пользователи</a>
+            <a href="#" class="mr-20 mb-2 opacity-80 hover:opacity-100 transition-opacity max-[700px]:hidden">Виджеты</a>
                 
                 
             </div>
             <img src="img/admin/admin.jpg"  class="cursor-pointer rounded-full" alt="">
         </nav>
     </div>
-    <div class="flex h-[80vh] mt-11">
-    <div class="flex text-[24px] justify-center flex-col  items-center font-black w-[336px]">
+    <div class="flex min-h-[80vh] mt-11">
+    <div class="flex text-[24px] justify-center flex-col  items-center font-black w-[336px] max-[700px]:hidden">
         
         <div class="flex mr-2 justify-center items-center py-[20px] mb-[52px] w-[244px]  pl-[25px] pr-[45px] bg-[#D9D9D9] rounded-3xl">
             <img src="img/admin/svg/bx_home.svg" alt="">
@@ -79,15 +111,17 @@
                 <div class="">Авторизация</div>
             </div>
         </div>
-        
-        <div class="mt-[110px] ml-[30px]">
-            <div class="bg-white rounded-3xl border-2 border-solid border-[#B5B5B5] h-[288px] w-[414px]">
-                <canvas  id="myChart"></canvas>
-              </div>
-              
-              
-              
-    </div>
+    <div class="flex justify-around flex-wrap items-center mt-[110px] ">
+        <div class="">
+            <div class="bg-white rounded-3xl border-2 border-solid border-[#B5B5B5] h-[288px] m-4 w-[414px]">
+                <canvas  class="" id="myChart"></canvas>
+              </div>        
+        </div>
+        <div class="">
+            <div class="bg-white rounded-3xl border-2 border-solid border-[#B5B5B5] m-4 h-[288px] w-[414px]">
+                <canvas  id="myChart2"></canvas>
+              </div>        
+        </div>
     </div>
 </div>
 </header>
