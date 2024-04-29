@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Forms</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="tailwind.config.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="/img/online.ico" type="image/x-icon">
+    <script src="js/script.js" defer></script>
+</head>
+<body class="bg-[#E2E9F4] text-[#333]">
+    <header class="bg-[#FFFFFF] min-h-[111px] rounded-b-3xl pt-4">
+        <nav class="  flex items-center justify-around ">
+            <a href="index.html" class="ml-2 logo flex items-center flex-wrap justify-center text-4xl font-extrabold">Online <img src="img/online.svg" alt=""> Forms</a>
+            <div class="text-2xl font-extrabold flex items-center justify-center flex-wrap">
+            <a href="#" class="ml-12 mb-2">Мои формы</a>
+            <a href="#" class="ml-12 mb-2">Очистить форму</a>
+            <a href="#" class="ml-12 mb-2">Настройки</a>
+                
+            </div>
+        </nav>
+    </header>
+    <section>
+        <div class="bg-white w-[750px] mt-[45px] mx-auto font-extrabold text-[20px] pb-[20px] rounded-3xl">
+            <div class="text-center text-[32px] pt-[20px]">Название опроса</div>
+            <div class="ml-4 mt-[60px] ">
+                <div class="">1. Как вы оцениваете этот сайт?</div>
+                <div class="flex mb-[10px] mt-[25px]">
+                    <img src="img/readyform/square.svg" alt="">
+                    <div  class="ml-2">Положительно </div>
+                </div>
+                <div class="flex ">
+                    <img src="img/readyform/markcheck.svg" alt="">
+                    <div  class="ml-2">Отрицательно </div>
+                </div>
+            </div>
+
+            <div class="ml-4 mt-[50px] ">
+                <div class="">2. Какие эмоции доставляет вам сайт?</div>
+                <div class="flex mb-[10px] mt-[25px]">
+                    <img src="img/readyform/markcheck.svg" alt="">
+                    <div  class="ml-2">Положительно </div>
+                </div>
+                <div class="flex ">
+                    <img src="img/readyform/square.svg" alt="">
+                    <div  class="ml-2">Отрицательно </div>
+                </div>
+            </div>
+
+            <div class="ml-4 mt-[50px]">
+                <div class="">3. Оцените по шкале от 1 до 10</div>
+                <input type="text" placeholder="Введите оценку..." class="placeholder:opacity-70 bg-[#E2E9F4] mt-[25px] ml-[30px] py-[10px] pl-[20px] pr-[110px] rounded-3xl">
+            </div>
+            <div class="text-center text-white max-w-[275px] mt-[75px] mb-[20px] rounded-3xl bg-[#699BF7] px-[80px] py-[18px] mx-auto">Отправить форму</div>
+        </div>
+    </section>
+    
+</body>
+</html>
