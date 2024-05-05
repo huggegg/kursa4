@@ -8,9 +8,20 @@
     <script src="tailwind.config.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="shortcut icon" href="/img/online.ico" type="image/x-icon">
-    <script src="js/script.js" defer></script>
+    <script src="js/form.js" defer></script>
 </head>
 <body class="bg-[#E2E9F4] text-[#333]">
+    <div  class="collapse z-50 w-full modal fixed top-0 left-0 bg-[#33333398] text-[#333] h-[100vh]" id="modal">
+        <div class="flex h-[100vh] justify-center items-center">
+        <div class="w-[549px] h-[382px] bg-[#E3E3E3] font-black text-[24px] rounded-3xl relative">
+            <div class="flex items-center text-center text-[32px] h-full w-[340px] m-auto">Ваша форма успешно отправлена</div>
+            <div class="flex justify-around items-center text-center mt-[28px]">
+            
+            <a id="closeModal" class="cursor-pointer absolute right-0 top-0">X</a>
+        </div>
+        </div>
+    </div>
+    </div>
     <header class="bg-[#FFFFFF] min-h-[111px] rounded-b-3xl pt-4">
         <nav class="  flex items-center justify-around ">
             <a href="index.html" class="ml-2 logo flex items-center flex-wrap justify-center text-4xl font-extrabold">Online <img src="img/online.svg" alt=""> Forms</a>
@@ -53,7 +64,7 @@
                 <div class="">3. Оцените по шкале от 1 до 10</div>
                 <input type="text" placeholder="Введите оценку..." class="placeholder:opacity-70 bg-[#E2E9F4] mt-[25px] ml-[30px] py-[10px] pl-[20px] pr-[110px] rounded-3xl">
             </div>
-            <div class="text-center text-white max-w-[275px] mt-[75px] mb-[20px] rounded-3xl bg-[#699BF7] px-[80px] py-[18px] mx-auto">Отправить форму</div>
+            <div id="sendForm" class="text-center text-white max-w-[275px] mt-[75px] mb-[20px] rounded-3xl bg-[#699BF7] px-[80px] py-[18px] mx-auto">Отправить форму</div>
         </div>
     </section>
     
